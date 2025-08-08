@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AURUM — Luxe E‑Commerce</title>
+    <meta name="description" content="AURUM: A luxurious, modern e‑commerce experience with shimmering gold accents on a matte black canvas." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="announcement">Free express shipping on orders over $150</div>
+      <div class="header-main container">
+        <a class="brand" href="#" aria-label="AURUM Home">
+          <span class="brand-logo" aria-hidden="true">◇</span>
+          <span class="brand-text">AURUM</span>
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#" class="nav-link">New</a>
+          <a href="#" class="nav-link">Women</a>
+          <a href="#" class="nav-link">Men</a>
+          <a href="#" class="nav-link">Accessories</a>
+          <a href="#" class="nav-link">Gifts</a>
+        </nav>
+        <div class="header-actions">
+          <div class="search">
+            <input type="text" placeholder="Search" aria-label="Search products" />
+          </div>
+          <button class="icon-btn" id="cartButton" aria-haspopup="dialog" aria-controls="cartDrawer" aria-expanded="false" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7 4h-2a1 1 0 0 0 0 2h1.28l1.6 8A3 3 0 0 0 10.82 17h5.86a3 3 0 0 0 2.94-2.42l1.04-5.2A1 1 0 0 0 19.67 8H8.38l-.3-1.5A2 2 0 0 0 6.1 4H7Zm11.93 6-0.8 4a1 1 0 0 1-.98.8h-5.86a1 1 0 0 1-.98-.8L8.76 10h10.17ZM10 20a1.75 1.75 0 1 1-3.5 0A1.75 1.75 0 0 1 10 20Zm10 0a1.75 1.75 0 1 1-3.5 0A1.75 1.75 0 0 1 20 20Z"/></svg>
+            <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-content">
+          <h1 class="hero-title">Elevate Your Style</h1>
+          <p class="hero-subtitle">Bold silhouettes. Refined materials. Crafted to glow against a matte night.</p>
+          <div class="hero-ctas">
+            <a href="#products" class="btn-gold">Shop New Arrivals</a>
+            <a href="#collections" class="btn-ghost">Explore Collections</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true"></div>
+      </section>
+
+      <section class="features container" id="collections">
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5Zm0 20-8-4v-7l8 4 8-4v7l-8 4Z"/></svg>
+          </div>
+          <h3>Premium Craft</h3>
+          <p>Meticulous detail and enduring materials designed to outlast trends.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 10 10A10.012 10.012 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+          </div>
+          <h3>2‑Year Warranty</h3>
+          <p>Quality guaranteed. Repairs and replacements made effortless.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M3 6h18v12H3z M5 8h14v8H5z"/></svg>
+          </div>
+          <h3>Fast Worldwide</h3>
+          <p>Express shipping and easy returns from any corner of the globe.</p>
+        </article>
+      </section>
+
+      <section class="products container" id="products">
+        <div class="section-head">
+          <h2>New Arrivals</h2>
+          <a href="#" class="link">View all</a>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-labelledby="cartTitle" aria-modal="true" aria-hidden="true">
+      <div class="cart-header">
+        <h3 id="cartTitle">Your Cart</h3>
+        <button class="icon-btn" id="closeCart" aria-label="Close cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4l-6.3 6.3-1.41-1.42L9.17 12 2.88 5.71 4.3 4.29l6.29 6.3 6.3-6.3 1.41 1.42Z"/></svg>
+        </button>
+      </div>
+      <div class="cart-body" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Subtotal</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button class="btn-gold btn-block">Checkout</button>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim" aria-hidden="true"></div>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand brand--footer">
+            <span class="brand-logo" aria-hidden="true">◇</span>
+            <span class="brand-text">AURUM</span>
+          </div>
+          <p class="footer-desc">Where matte night meets luminous gold. Designed for those who lead.</p>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <ul class="footer-links">
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Warranty</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter" onsubmit="event.preventDefault()">
+            <input type="email" placeholder="Your email" aria-label="Email" />
+            <button class="btn-gold">Subscribe</button>
+            <small>By subscribing you agree to our <a href="#">privacy policy</a>.</small>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <small>© <span id="year"></span> AURUM. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
