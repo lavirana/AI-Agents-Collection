@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(#0c0f1a, #0a0d16);
+  color: #e6edf3;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+#hud {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+#hud .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#status {
+  min-height: 20px;
+}
+
+#help {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 320px;
+}
+
+#help ul {
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+#help li {
+  margin: 4px 0;
+}
