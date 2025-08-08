@@ -29,3 +29,8 @@ Eliminate all enemies patrolling the rooftops.
 - Swing by attaching the web to buildings. Use A/D to pump and gain momentum.
 - You can land on rooftops and jump again.
 - Web bolts collide with enemies and buildings.
+
+
+<img width="1440" height="777" alt="Screenshot 2025-08-08 at 11 05 07 PM" src="https://github.com/user-attachments/assets/e8e157ab-3546-4810-99e3-6a2e5117512a" />
+
+
